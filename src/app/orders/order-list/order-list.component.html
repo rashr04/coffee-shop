@@ -1,0 +1,13 @@
+<h1 class="title">Here are your Orders</h1>
+<div class="content">
+
+<table>
+  <tr  *ngFor="let order of orders; let i = index">
+    <td>{{ order.orderDate }}</td>
+    <td>$ {{ order.orderTotal }}</td>
+    <td>{{ order.customerName }}</td>
+    <td>{{ order.status }}</td>
+    <td><a>Details</a></td>
+  </tr>
+</table>
+</div>

@@ -1,0 +1,50 @@
+<app-overlay></app-overlay>
+
+<div class="wrapper" [class.active]="true" (click)="close()">
+
+  <div class="container" @animate *ngIf="true" (click)="handleContainerClick($event)">
+    <div class="close-button" (click)="close()">
+      <div class="close-button-line-1">
+        <div class="close-button-line-2"></div>
+      </div>
+    </div>
+
+    <h1 class="title">Create Your Coffee</h1>
+
+    <div class="body-customization">
+      <form class="body-customization-form" [formGroup]="form">
+        <div class="form-element">
+          <label class="form-label">Name</label>
+          <div >
+            <input type="input" id="name" formControlName="name" [placeholder]="'Enter Name'">
+          </div>
+        </div>
+        <div class="form-element">
+          <label class="form-label">Volume</label>
+          <div class="volume" *ngFor="let volume of volumes; let i = index">
+            <input type="checkbox" id="{{i}}" formControlName="volume" value="{{volume}}">
+            <label for="{{i}}">{{volume}} oz</label>
+          </div>
+        </div>
+
+        <div class="form-element">
+          <label class="form-label">Sugar</label>
+          <div class="range">
+            <app-range-control class="range-input" [min]="0" [max]="3" formControlName="sugar"></app-range-control>
+            <span class="range-label">{{form.controls.sugar.value > 0 ? form.controls.sugar.value + ' tsp' : 'No sugar'}}</span>
+          </div>
+        </div>
+
+        <div class="form-element">
+          <input class="checkbox" type="checkbox" formControlName="cupCap" id="cupCap" />
+          <label for="cupCap">Cup cap</label>
+        </div>
+      </form>
+
+      <h2 class="body-customization-price">{{ price | currency: "USD":"symbol":".0-2" }}</h2>
+    </div>
+
+    <app-button class="button" [disabled]="form.invalid" (click)="handleButtonClick()">Add</app-button>
+  </div>
+
+</div>
