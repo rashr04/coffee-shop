@@ -1,0 +1,8 @@
+<div class="container">
+  <app-loading *ngIf="coffees === null"></app-loading>
+  <div class="card" *ngFor="let coffee of coffees" (click)="handleClick(coffee)">
+    <img class="card-image" src="assets/images/{{ coffee?.image || 'default.webp'}}" />
+    <h2 class="card-title">{{ coffee?.name }}</h2>
+    <div class="card-price">{{ coffee?.prices[0] | currency:'USD':'symbol':'.0-2' }}</div>
+  </div>
+</div>
