@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - the required collections `coffees` and `orders` are existing; else run the following command:
         - `db.createCollection( "coffees")`
         - `db.createCollection( "orders")`
-    - coffees collection has some initial data
+    - coffees collection has some initial data. Instruction in `data.md`
 ## Launch back-end server[uses port 8080]:
   npm start
 ## Launch front-end server[uses port 4200]:
@@ -24,6 +24,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - `http://localhost:8080/api/coffees`
   - `http://localhost:8080/api/orders`
 ## Future enhancements:
+    - sggregate `order` service from `coffee` service
     - assets to CDN
     - localization
     - add coffee from admin tools
