@@ -27,7 +27,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - assets to CDN
     - localization
     - add coffee from admin tools
-    - responsic=ve design
-    - order notification system
+    - responsive design
+    - order notification system - lambda
     - coffee type table
     - pricing table
