@@ -12,14 +12,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
         - `db.createCollection( "coffees")`
         - `db.createCollection( "orders")`
     - coffees collection has some initial data
-## to launch back-end server[uses port 8080]:
+## Launch back-end server[uses port 8080]:
   npm start
-## to launch front-end server[uses port 4200]:
+## Launch front-end server[uses port 4200]:
   ng serve --proxy-config proxy.config.json
 
-## to test in postman import following collection to postman:
+## Test in postman import following collection to postman:
   coffee-shop.postman_collection.json
 
-## to test in get APIs in browser, use the following:
-  http://localhost:8080/api/coffees
-  http://localhost:8080/api/orders
+## Test in get APIs in browser, use the following:
+  `http://localhost:8080/api/coffees`
+  `http://localhost:8080/api/orders`
