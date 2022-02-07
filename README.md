@@ -23,3 +23,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Test in get APIs in browser, use the following:
   - `http://localhost:8080/api/coffees`
   - `http://localhost:8080/api/orders`
+## Future enhancements:
+    - assets to CDN
+    - localization
+    - add coffee from admin tools
+    - responsic=ve design
+    - order notification system
+    - coffee type table
+    - pricing table
